@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:phasmophoguia/app/core/theme/app_colors.dart';
-import 'package:phasmophoguia/app/core/theme/widgets/buttons/elevated_button_default.dart';
-import 'package:phasmophoguia/app/pages/home/widgets/app_name.dart';
+import 'package:get/get.dart';
+import 'package:phasmophoguia/app/app_routes.dart';
+
+import '../../core/theme/app_colors.dart';
+import '../../core/theme/widgets/buttons/elevated_button_default.dart';
+import '../../core/theme/widgets/texts/page_title.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
@@ -14,7 +17,9 @@ class HomePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const AppName(),
+            const PageTitle(
+              title: "Phasmophobia",
+            ),
             Expanded(
               child: FractionallySizedBox(
                 widthFactor: 0.8,
@@ -25,7 +30,9 @@ class HomePage extends StatelessWidget {
                       ElevatedButtonDefault(
                         label: "Evidencias",
                         onPressed: () {
-                          // Go to evidence page
+                          Get.toNamed(
+                            AppRoutes.evidences,
+                          );
                         },
                       ),
                       ElevatedButtonDefault(
