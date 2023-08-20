@@ -62,8 +62,8 @@ flutter:
 
   # To add assets to your application, add an assets section.
   assets:
-    - json/evidences.json
-    - json/ghosts.json
+    - json/
+    - assets/images/evidences/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

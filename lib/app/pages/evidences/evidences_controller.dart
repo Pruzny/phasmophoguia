@@ -3,22 +3,26 @@ import 'package:get/get.dart';
 import '../../core/domain/usecases/get_all_evidences_usecase.dart';
 
 class EvidencesController extends GetxController {
-  var isLoading = false.obs;
+  final _isLoading = false.obs;
+
+  final evidences = [].obs;
 
   final GetAllEvidencesUsecase getAllEvidences;
 
   EvidencesController({required this.getAllEvidences});
 
+  bool get isLoading => _isLoading.value;
+
   @override
   void onInit() async {
-    super.onInit();
     await fetch();
+    super.onInit();
   }
 
   Future fetch() async {
-    isLoading.value = true;
-    var evidences = await getAllEvidences(null);
-    print(evidences);
-    isLoading.value = false;
+    _isLoading.value = true;
+    evidences.clear();
+    evidences.addAll(await getAllEvidences(null));
+    _isLoading.value = false;
   }
 }

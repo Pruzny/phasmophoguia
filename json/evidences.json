@@ -6,7 +6,7 @@
   },
   {
     "id": 2,
-    "name": "Temperatura Baixa",
+    "name": "Temp. Baixa",
     "label": "freezing"
   },
   {
@@ -16,7 +16,7 @@
   },
   {
     "id": 4,
-    "name": "Ultravioleta",
+    "name": "UV",
     "label": "ultraviolet"
   },
   {
