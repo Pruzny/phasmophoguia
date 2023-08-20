@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'app_bindings.dart';
 import 'app_routes.dart';
 
 class AppWidget extends StatelessWidget {
@@ -13,6 +14,7 @@ class AppWidget extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       getPages: AppRoutes.routes,
       initialRoute: AppRoutes.home,
+      initialBinding: AppBindings(),
     );
   }
 }
