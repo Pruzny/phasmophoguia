@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:phasmophoguia/app/pages/evidences/widgets/texts/evidence_label.dart';
 
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/widgets/texts/page_title.dart';
 import 'evidences_controller.dart';
+import 'widgets/texts/evidence_label.dart';
 
 class EvidencesPage extends StatelessWidget {
   EvidencesPage({super.key});
