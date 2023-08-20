@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             const PageTitle(
-              title: "Phasmophobia",
+              title: "Phasmophoguia",
             ),
             Expanded(
               child: FractionallySizedBox(
