@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "EMF 5",
+    "label": "emf-5"
+  },
+  {
+    "id": 2,
+    "name": "Temperatura Baixa",
+    "label": "freezing"
+  },
+  {
+    "id": 3,
+    "name": "D.O.T.S.",
+    "label": "dots"
+  },
+  {
+    "id": 4,
+    "name": "Ultravioleta",
+    "label": "ultraviolet"
+  },
+  {
+    "id": 5,
+    "name": "Escrita",
+    "label": "writing"
+  },
+  {
+    "id": 6,
+    "name": "Spirit Box",
+    "label": "spirit-box"
+  },
+  {
+    "id": 7,
+    "name": "Orbes",
+    "label": "orbs"
+  }
+]
