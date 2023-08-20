@@ -27,24 +27,30 @@ class EvidencesPage extends StatelessWidget {
                   child: FractionallySizedBox(
                       widthFactor: 0.8,
                       child: Obx(
-                        () => Center(
-                          child: controller.isLoading
-                              ? const CircularProgressIndicator(
-                                  color: AppColors.white,
-                                )
-                              : Wrap(
-                                  spacing: 16,
-                                  runSpacing: 16,
-                                  crossAxisAlignment: WrapCrossAlignment.end,
-                                  children: controller.evidences
-                                      .map(
-                                        (evidence) => EvidenceItem(
+                        () => controller.isLoading
+                            ? const CircularProgressIndicator(
+                                color: AppColors.white,
+                              )
+                            : Wrap(
+                                spacing: 16,
+                                runSpacing: 16,
+                                crossAxisAlignment: WrapCrossAlignment.end,
+                                children: controller.evidences
+                                    .map(
+                                      (evidence) => GestureDetector(
+                                        onTap: () {
+                                          controller.changeEvidenceStatus(
+                                            evidence.id,
+                                          );
+                                        },
+                                        child: EvidenceItem(
                                           evidence: evidence,
+                                          status: controller.getEvidenceStatus(evidence.id),
                                         ),
-                                      )
-                                      .toList(),
-                                ),
-                        ),
+                                      ),
+                                    )
+                                    .toList(),
+                              ),
                       )),
                 ),
                 const SizedBox(

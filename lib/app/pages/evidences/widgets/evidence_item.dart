@@ -1,25 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:phasmophoguia/app/core/constants.dart';
 
+import '../../../core/constants.dart';
 import '../../../core/domain/entities/evidence_entity.dart';
+import '../../../core/enums/evidence_status.dart';
 import '../../../core/theme/app_colors.dart';
 
+const colorMap = <EvidenceStatus, Color>{
+  EvidenceStatus.notSelected: AppColors.white,
+  EvidenceStatus.selected: AppColors.green,
+  EvidenceStatus.discarded: AppColors.lightGrey,
+  EvidenceStatus.impossible: AppColors.grey,
+};
+
 class EvidenceItem extends StatelessWidget {
-  const EvidenceItem({
+  EvidenceItem({
     super.key,
     required this.evidence,
-    this.color = AppColors.white,
-    this.inactiveColor = AppColors.lightGrey,
-    this.isActive = true,
-  });
+    required this.status,
+  }) : color = colorMap[status]!;
 
   final EvidenceEntity evidence;
 
+  final EvidenceStatus status;
+
   final Color color;
-
-  final Color inactiveColor;
-
-  final bool isActive;
 
   @override
   Widget build(BuildContext context) {
@@ -36,14 +40,20 @@ class EvidenceItem extends StatelessWidget {
             evidence.name,
             style: TextStyle(
               color: color,
-              fontWeight: FontWeight.bold,
-              fontSize: 16,
+              fontSize: 20,
+              fontFamily: "Lazy Dog",
             ),
             textAlign: TextAlign.center,
           ),
-          Image.asset(
-            "$evidencesImagePath${evidence.label}.png",
-            height: 60,
+          ColorFiltered(
+            colorFilter: ColorFilter.mode(
+              color,
+              BlendMode.srcIn,
+            ),
+            child: Image.asset(
+              "$evidencesImagePath${evidence.label}.png",
+              height: 60,
+            ),
           ),
         ],
       ),
