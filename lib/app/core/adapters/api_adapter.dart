@@ -1,6 +1,6 @@
 import 'package:flutter/services.dart';
 
-import '../../constants.dart';
+import '../constants.dart';
 
 abstract class ApiAdapter {
   Future readAll();
