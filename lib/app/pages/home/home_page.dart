@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:phasmophoguia/app/app_routes.dart';
 
+import '../../app_routes.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/widgets/buttons/elevated_button_default.dart';
 import '../../core/theme/widgets/texts/page_title.dart';
 
 class HomePage extends StatelessWidget {
-  HomePage({super.key});
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {

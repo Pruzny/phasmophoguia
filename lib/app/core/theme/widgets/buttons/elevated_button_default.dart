@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:phasmophoguia/app/core/theme/app_colors.dart';
+
+import '../../app_colors.dart';
 
 class ElevatedButtonDefault extends StatelessWidget {
   const ElevatedButtonDefault({
@@ -30,8 +31,7 @@ class ElevatedButtonDefault extends StatelessWidget {
       onPressed: isDisabled ? null : onPressed,
       onLongPress: isDisabled ? null : onLongPress,
       style: ButtonStyle(
-        minimumSize:
-            MaterialStateProperty.all(const Size(double.maxFinite, 48)),
+        minimumSize: MaterialStateProperty.all(const Size(double.maxFinite, 48)),
         shape: MaterialStateProperty.all(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(24),
@@ -44,8 +44,7 @@ class ElevatedButtonDefault extends StatelessWidget {
       ),
       child: Text(
         label,
-        style: const TextStyle(
-            color: AppColors.black, fontSize: 32, fontFamily: "Lazy Dog"),
+        style: const TextStyle(color: AppColors.black, fontSize: 32, fontFamily: "Lazy Dog"),
       ),
     );
   }

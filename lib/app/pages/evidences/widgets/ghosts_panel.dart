@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:phasmophoguia/app/pages/evidences/widgets/texts/remaining_evidence_text.dart';
 
 import '../../../core/theme/app_colors.dart';
 import '../evidences_controller.dart';
+import 'texts/remaining_evidence_text.dart';
 
 class GhostsPanel extends StatelessWidget {
   GhostsPanel({super.key});

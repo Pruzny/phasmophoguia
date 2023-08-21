@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:phasmophoguia/app/core/theme/app_colors.dart';
+
+import '../../app_colors.dart';
 
 class BackButtonApp extends StatelessWidget {
   const BackButtonApp({super.key});
