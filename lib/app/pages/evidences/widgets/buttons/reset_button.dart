@@ -15,7 +15,7 @@ class ResetButton extends StatelessWidget {
         return Obx(
           () => controller.hasContent
               ? Container(
-                  padding: const EdgeInsets.only(top: 16, right: 32),
+                  padding: const EdgeInsets.only(top: 32, right: 32),
                   child: FloatingActionButton(
                     onPressed: () {
                       controller.reset();
