@@ -1,18 +1,16 @@
 import 'package:flutter/services.dart';
 
-import '../constants.dart';
-
 abstract class ApiAdapter {
   Future readAll();
 }
 
 class ApiAdapterImpl implements ApiAdapter {
-  final String fileName;
+  final String filePath;
 
-  ApiAdapterImpl({required this.fileName});
+  ApiAdapterImpl({required this.filePath});
 
   @override
   Future<String> readAll() async {
-    return await rootBundle.loadString("$jsonPath$fileName");
+    return await rootBundle.loadString(filePath);
   }
 }

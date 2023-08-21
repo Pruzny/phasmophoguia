@@ -1,8 +1,8 @@
 const jsonPath = "json/";
 
-const evidencesFileName = "evidences.json";
+const evidencesFileLocation = "${jsonPath}evidences.json";
 
-const ghostsFileName = "ghosts.json";
+const ghostsFileLocation = "${jsonPath}ghosts.json";
 
 const imagePath = "assets/images/";
 

@@ -2,121 +2,121 @@
   {
     "id": 1,
     "name": "Banshee",
-    "evidence": [3, 7, 4]
+    "evidences": [3, 7, 4]
   },
   {
     "id": 2,
     "name": "Demon",
-    "evidence": [5, 4, 2]
+    "evidences": [5, 4, 2]
   },
   {
     "id": 3,
     "name": "Deogen",
-    "evidence": [3, 5, 6]
+    "evidences": [3, 5, 6]
   },
   {
     "id": 4,
     "name": "Goryo",
-    "evidence": [3, 1, 4]
+    "evidences": [3, 1, 4]
   },
   {
     "id": 5,
     "name": "Hantu",
-    "evidence": [7, 4, 2]
+    "evidences": [7, 4, 2]
   },
   {
     "id": 6,
     "name": "Jinn",
-    "evidence": [1, 4, 2]
+    "evidences": [1, 4, 2]
   },
   {
     "id": 7,
     "name": "Mare",
-    "evidence": [5, 7, 6]
+    "evidences": [5, 7, 6]
   },
   {
     "id": 8,
     "name": "Moroi",
-    "evidence": [5, 2, 6]
+    "evidences": [5, 2, 6]
   },
   {
     "id": 9,
     "name": "Myling",
-    "evidence": [5, 1, 4]
+    "evidences": [5, 1, 4]
   },
   {
     "id": 10,
     "name": "Obake",
-    "evidence": [1, 7, 4]
+    "evidences": [1, 7, 4]
   },
   {
     "id": 11,
     "name": "Oni",
-    "evidence": [3, 1, 2]
+    "evidences": [3, 1, 2]
   },
   {
     "id": 12,
     "name": "Onryo",
-    "evidence": [7, 2, 6]
+    "evidences": [7, 2, 6]
   },
   {
     "id": 13,
     "name": "Phantom",
-    "evidence": [3, 4, 6]
+    "evidences": [3, 4, 6]
   },
   {
     "id": 14,
     "name": "Poltergeist",
-    "evidence": [5, 4, 6]
+    "evidences": [5, 4, 6]
   },
   {
     "id": 15,
     "name": "Raiju",
-    "evidence": [3, 1, 7]
+    "evidences": [3, 1, 7]
   },
   {
     "id": 16,
     "name": "Revenant",
-    "evidence": [5, 7, 2]
+    "evidences": [5, 7, 2]
   },
   {
     "id": 17,
     "name": "Shade",
-    "evidence": [5, 1, 2]
+    "evidences": [5, 1, 2]
   },
   {
     "id": 18,
     "name": "Spirit",
-    "evidence": [5, 1, 6]
+    "evidences": [5, 1, 6]
   },
   {
     "id": 19,
     "name": "Thaye",
-    "evidence": [3, 5, 7]
+    "evidences": [3, 5, 7]
   },
   {
     "id": 20,
-    "name": "The Mimic",
-    "evidence": [4, 2, 6]
+    "name": "Mimico",
+    "evidences": [4, 2, 6, 7]
   },
   {
     "id": 21,
     "name": "The Twins",
-    "evidence": [1, 2, 6]
+    "evidences": [1, 2, 6]
   },
   {
     "id": 22,
     "name": "Wraith",
-    "evidence": [3, 1, 6]
+    "evidences": [3, 1, 6]
   },
   {
     "id": 23,
     "name": "Yokai",
-    "evidence": [3, 7, 6]
+    "evidences": [3, 7, 6]
   },
   {
     "id": 24,
     "name": "Yurei",
-    "evidence": [3, 7, 2]
+    "evidences": [3, 7, 2]
   }
 ]

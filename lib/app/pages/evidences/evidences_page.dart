@@ -4,7 +4,8 @@ import 'package:get/get.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/widgets/texts/page_title.dart';
 import 'evidences_controller.dart';
-import 'widgets/evidence_item.dart';
+import 'widgets/evidences_panel.dart';
+import 'widgets/ghosts_panel.dart';
 
 class EvidencesPage extends StatelessWidget {
   EvidencesPage({super.key});
@@ -24,38 +25,29 @@ class EvidencesPage extends StatelessWidget {
                   title: "Evidencias",
                 ),
                 Expanded(
-                  child: FractionallySizedBox(
-                      widthFactor: 0.8,
-                      child: Obx(
-                        () => controller.isLoading
-                            ? const CircularProgressIndicator(
-                                color: AppColors.white,
-                              )
-                            : Wrap(
-                                spacing: 16,
-                                runSpacing: 16,
-                                crossAxisAlignment: WrapCrossAlignment.end,
-                                children: controller.evidences
-                                    .map(
-                                      (evidence) => GestureDetector(
-                                        onTap: () {
-                                          controller.changeEvidenceStatus(
-                                            evidence.id,
-                                          );
-                                        },
-                                        child: EvidenceItem(
-                                          evidence: evidence,
-                                          status: controller.getEvidenceStatus(evidence.id),
-                                        ),
-                                      ),
-                                    )
-                                    .toList(),
-                              ),
-                      )),
+                  child: Obx(
+                    () => controller.isLoading
+                        ? const Center(
+                            child: CircularProgressIndicator(
+                              color: AppColors.white,
+                            ),
+                          )
+                        : FractionallySizedBox(
+                            widthFactor: 0.8,
+                            child: Column(
+                              children: [
+                                const EvidencesPanel(),
+                                Expanded(
+                                  child: FractionallySizedBox(
+                                    heightFactor: 0.75,
+                                    child: GhostsPanel(),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                  ),
                 ),
-                const SizedBox(
-                  height: 144,
-                )
               ],
             ),
           ),
