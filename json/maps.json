@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "name": "6 Tanglewood Drive",
+    "label": "tanglewood",
+    "mapSize": 0,
+    "floors": 2,
+    "rooms": 11,
+    "exits": 1,
+    "sinks": 3,
+    "cameras": 1
+  },
+  {
+    "id": 2,
+    "name": "10 Ridgeview Court",
+    "label": "ridgeview",
+    "mapSize": 0,
+    "floors": 3,
+    "rooms": 16,
+    "exits": 1,
+    "sinks": 5,
+    "cameras": 1
+  },
+  {
+    "id": 3,
+    "name": "13 Willow Street",
+    "label": "willow",
+    "mapSize": 0,
+    "floors": 2,
+    "rooms": 10,
+    "exits": 1,
+    "sinks": 2,
+    "cameras": 1
+  },
+  {
+    "id": 4,
+    "name": "42 Edgefield Road",
+    "label": "edgefield",
+    "mapSize": 0,
+    "floors": 3,
+    "rooms": 16,
+    "exits": 1,
+    "sinks": 4,
+    "cameras": 1
+  },
+  {
+    "id": 5,
+    "name": "Bleasdale Farmhouse",
+    "label": "bleasdale",
+    "mapSize": 0,
+    "floors": 3,
+    "rooms": 16,
+    "exits": 4,
+    "sinks": 4,
+    "cameras": 1
+  },
+  {
+    "id": 6,
+    "name": "Camp Woodwind",
+    "label": "woodwind",
+    "mapSize": 0,
+    "floors": 1,
+    "rooms": 11,
+    "exits": 1,
+    "sinks": 0,
+    "cameras": 1
+  },
+  {
+    "id": 7,
+    "name": "Grafton Farmhouse",
+    "label": "grafton",
+    "mapSize": 0,
+    "floors": 2,
+    "rooms": 13,
+    "exits": 2,
+    "sinks": 3,
+    "cameras": 1
+  },
+  {
+    "id": 8,
+    "name": "Maple Lodge Campsite",
+    "label": "maple",
+    "mapSize": 1,
+    "floors": 3,
+    "rooms": 25,
+    "exits": 1,
+    "sinks": 5,
+    "cameras": 2
+  },
+  {
+    "id": 9,
+    "name": "Prison",
+    "label": "prison",
+    "mapSize": 1,
+    "floors": 2,
+    "rooms": 31,
+    "exits": 3,
+    "sinks": 16,
+    "cameras": 11
+  },
+  {
+    "id": 10,
+    "name": "Sunny Meadows Mental Institution",
+    "label": "sunny",
+    "mapSize": 2,
+    "floors": 2,
+    "rooms": 69,
+    "exits": 1,
+    "sinks": 0,
+    "cameras": 8
+  }
+]
