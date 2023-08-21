@@ -18,7 +18,6 @@ class GhostEntity {
   }
 
   factory GhostEntity.fromMap(Map<String, dynamic> map) {
-    print(map);
     return GhostEntity(
       id: map["id"] as int,
       name: map["name"] as String,

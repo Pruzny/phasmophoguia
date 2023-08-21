@@ -23,6 +23,7 @@ class EvidencesPanel extends StatelessWidget {
                     controller.changeEvidenceStatus(
                       evidence.id,
                     );
+                    controller.fetch();
                     controller.update();
                   },
                   child: EvidenceItem(

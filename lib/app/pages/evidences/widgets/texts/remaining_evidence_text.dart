@@ -13,7 +13,7 @@ class RemainingEvidenceText extends StatelessWidget {
       text,
       style: const TextStyle(
         color: AppColors.lightGrey,
-        fontSize: 16,
+        fontSize: 18,
         fontFamily: "Lazy Dog",
       ),
     );

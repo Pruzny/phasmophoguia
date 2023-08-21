@@ -4,6 +4,7 @@ import '../../core/domain/entities/evidence_entity.dart';
 import '../../core/domain/entities/ghost_entity.dart';
 import '../../core/domain/usecases/get_all_evidences_usecase.dart';
 import '../../core/domain/usecases/get_all_ghosts_usecase.dart';
+import '../../core/domain/usecases/search_ghost_usecase.dart';
 import '../../core/enums/evidence_status.dart';
 
 class EvidencesController extends GetxController {
@@ -19,24 +20,33 @@ class EvidencesController extends GetxController {
 
   final GetAllGhostsUsecase getAllGhosts;
 
-  EvidencesController({required this.getAllEvidences, required this.getAllGhosts});
+  final SearchGhostUsecase searchGhost;
+
+  EvidencesController({required this.getAllEvidences, required this.getAllGhosts, required this.searchGhost});
 
   bool get isLoading => _isLoading.value;
 
+  bool get foundGhost => ghosts.length == 1;
+
   @override
   void onInit() async {
-    await fetch();
-    super.onInit();
-  }
-
-  Future fetch() async {
     _isLoading.value = true;
+
     evidences.clear();
     evidences.addAll(await getAllEvidences(null));
     evidencesStatus.clear();
     evidencesStatus.addAll({for (var e in evidences) e.id: EvidenceStatus.notSelected});
+
+    await fetch();
+    super.onInit();
+
+    _isLoading.value = false;
+  }
+
+  Future fetch() async {
+    _isLoading.value = true;
     ghosts.clear();
-    ghosts.addAll(await getAllGhosts(null));
+    ghosts.addAll(await searchGhost(evidencesStatus));
     _isLoading.value = false;
   }
 
@@ -54,5 +64,9 @@ class EvidencesController extends GetxController {
 
   List<int> getRemainingEvidences(GhostEntity ghost) {
     return ghost.evidences.where((e) => evidencesStatus[e] == EvidenceStatus.notSelected).toList();
+  }
+
+  String getEvidenceName(int id) {
+    return evidences.firstWhere((e) => e.id == id).name;
   }
 }

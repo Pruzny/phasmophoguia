@@ -17,60 +17,76 @@ class GhostsPanel extends StatelessWidget {
       builder: (controller) => Obx(
         () => Container(
           decoration: BoxDecoration(
-            color: AppColors.grey,
+            color: controller.foundGhost ? AppColors.green : AppColors.grey,
             borderRadius: BorderRadius.circular(16),
           ),
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Scrollbar(
-              thumbVisibility: true,
-              controller: _scrollController,
-              child: GlowingOverscrollIndicator(
-                axisDirection: AxisDirection.right,
-                color: AppColors.lightGrey,
-                child: ListView.separated(
-                  separatorBuilder: (context, index) => const VerticalDivider(
-                    color: AppColors.lightGrey,
+          child: controller.foundGhost
+              ? Center(
+                  child: Text(
+                    controller.ghosts.first.name.toUpperCase(),
+                    style: const TextStyle(
+                      color: AppColors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 48,
+                      fontFamily: "Lazy Dog",
+                    ),
                   ),
-                  scrollDirection: Axis.horizontal,
-                  controller: _scrollController,
-                  itemCount: controller.ghosts.length,
-                  itemBuilder: (context, index) {
-                    final ghost = controller.ghosts[index];
-                    final remainingEvidences = controller.getRemainingEvidences(ghost);
+                )
+              : Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Scrollbar(
+                    thumbVisibility: true,
+                    controller: _scrollController,
+                    child: GlowingOverscrollIndicator(
+                      axisDirection: AxisDirection.right,
+                      color: AppColors.lightGrey,
+                      child: ListView.separated(
+                        separatorBuilder: (context, index) => const VerticalDivider(
+                          color: AppColors.lightGrey,
+                        ),
+                        scrollDirection: Axis.horizontal,
+                        controller: _scrollController,
+                        itemCount: controller.ghosts.length,
+                        itemBuilder: (context, index) {
+                          final ghost = controller.ghosts[index];
+                          final remainingEvidences = controller.getRemainingEvidences(ghost);
 
-                    return IntrinsicWidth(
-                      child: ListTile(
-                          onTap: () {
-                            // TODO: Implementar ação de clique no fantasma para abrir a página correspondente
-                          },
-                          contentPadding: const EdgeInsets.symmetric(
-                            horizontal: 4,
-                          ),
-                          title: Text(
-                            ghost.name.toUpperCase(),
-                            style: const TextStyle(
-                              color: AppColors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18,
-                              fontFamily: "Lazy Dog",
-                            ),
-                          ),
-                          subtitle: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: List.generate(
-                              remainingEvidences.length,
-                              (index) => RemainingEvidenceText(
-                                text: "${remainingEvidences[index]}",
-                              ),
-                            ),
-                          )),
-                    );
-                  },
+                          return IntrinsicWidth(
+                            child: ListTile(
+                                onTap: () {
+                                  // TODO: Implementar ação de clique no fantasma para abrir a página correspondente
+                                },
+                                contentPadding: const EdgeInsets.symmetric(
+                                  horizontal: 4,
+                                ),
+                                title: Text(
+                                  ghost.name.toUpperCase(),
+                                  style: const TextStyle(
+                                    color: AppColors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                    fontFamily: "Lazy Dog",
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                                subtitle: Padding(
+                                  padding: const EdgeInsets.only(top: 8.0),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: List.generate(
+                                      remainingEvidences.length,
+                                      (index) => RemainingEvidenceText(
+                                        text: controller.getEvidenceName(remainingEvidences[index]),
+                                      ),
+                                    ),
+                                  ),
+                                )),
+                          );
+                        },
+                      ),
+                    ),
+                  ),
                 ),
-              ),
-            ),
-          ),
         ),
       ),
     );
