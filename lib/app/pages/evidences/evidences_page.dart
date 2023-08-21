@@ -5,6 +5,7 @@ import '../../core/theme/app_colors.dart';
 import '../../core/theme/widgets/buttons/back_button_app.dart';
 import '../../core/theme/widgets/texts/page_title.dart';
 import 'evidences_controller.dart';
+import 'widgets/buttons/reset_button.dart';
 import 'widgets/evidences_panel.dart';
 import 'widgets/ghosts_panel.dart';
 
@@ -17,7 +18,18 @@ class EvidencesPage extends StatelessWidget {
       init: Get.find<EvidencesController>(),
       builder: (controller) {
         return Scaffold(
-          floatingActionButton: const BackButtonApp(),
+          floatingActionButton: const Stack(
+            children: [
+              Align(
+                alignment: Alignment.topLeft,
+                child: BackButtonApp(),
+              ),
+              Align(
+                alignment: Alignment.topRight,
+                child: ResetButton(),
+              ),
+            ],
+          ),
           floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
           body: Container(
             color: AppColors.darkGrey,

@@ -30,6 +30,16 @@ class EvidencesController extends GetxController {
 
   bool get foundGhost => ghosts.length == 1;
 
+  bool get hasContent {
+    for (var e in evidencesStatus.values) {
+      if (e != EvidenceStatus.notSelected) {
+        return true;
+      }
+    }
+
+    return discardedGhosts.isNotEmpty;
+  }
+
   @override
   void onInit() async {
     _isLoading.value = true;
@@ -78,5 +88,13 @@ class EvidencesController extends GetxController {
     } else {
       discardedGhosts.add(ghost.id);
     }
+  }
+
+  void reset() {
+    for (var e in evidencesStatus.keys) {
+      evidencesStatus[e] = EvidenceStatus.notSelected;
+    }
+
+    discardedGhosts.clear();
   }
 }
