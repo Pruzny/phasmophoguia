@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../core/theme/app_colors.dart';
+import '../../core/theme/widgets/buttons/back_button_app.dart';
 import '../../core/theme/widgets/texts/page_title.dart';
 import 'evidences_controller.dart';
 import 'widgets/evidences_panel.dart';
@@ -16,6 +17,8 @@ class EvidencesPage extends StatelessWidget {
       init: Get.find<EvidencesController>(),
       builder: (controller) {
         return Scaffold(
+          floatingActionButton: const BackButtonApp(),
+          floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
           body: Container(
             color: AppColors.darkGrey,
             child: Column(
