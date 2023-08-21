@@ -52,9 +52,10 @@ class HomePage extends StatelessWidget {
                       ElevatedButtonDefault(
                         label: "Mapas",
                         onPressed: () {
-                          // Go to maps page
+                          Get.toNamed(
+                            AppRoutes.maps,
+                          );
                         },
-                        isDisabled: true,
                       ),
                     ],
                   ),
