@@ -16,6 +16,8 @@ class EvidencesController extends GetxController {
 
   final ghosts = (<GhostEntity>[]).obs;
 
+  final discardedGhosts = (<int>[]).obs;
+
   final GetAllEvidencesUsecase getAllEvidences;
 
   final GetAllGhostsUsecase getAllGhosts;
@@ -68,5 +70,13 @@ class EvidencesController extends GetxController {
 
   String getEvidenceName(int id) {
     return evidences.firstWhere((e) => e.id == id).name;
+  }
+
+  void handleGhostTap(GhostEntity ghost) {
+    if (discardedGhosts.contains(ghost.id)) {
+      discardedGhosts.remove(ghost.id);
+    } else {
+      discardedGhosts.add(ghost.id);
+    }
   }
 }

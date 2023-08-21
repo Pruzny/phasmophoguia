@@ -50,22 +50,25 @@ class GhostsPanel extends StatelessWidget {
                         itemBuilder: (context, index) {
                           final ghost = controller.ghosts[index];
                           final remainingEvidences = controller.getRemainingEvidences(ghost);
+                          final isDiscarded = controller.discardedGhosts.contains(ghost.id);
 
                           return IntrinsicWidth(
                             child: ListTile(
                                 onTap: () {
-                                  // TODO: Implementar ação de clique no fantasma para abrir a página correspondente
+                                  controller.handleGhostTap(ghost);
+                                  controller.update();
                                 },
                                 contentPadding: const EdgeInsets.symmetric(
                                   horizontal: 4,
                                 ),
                                 title: Text(
                                   ghost.name.toUpperCase(),
-                                  style: const TextStyle(
-                                    color: AppColors.white,
+                                  style: TextStyle(
+                                    color: isDiscarded ? AppColors.lightGrey : AppColors.white,
                                     fontWeight: FontWeight.bold,
                                     fontSize: 18,
                                     fontFamily: "Lazy Dog",
+                                    decoration: isDiscarded ? TextDecoration.lineThrough : null,
                                   ),
                                   textAlign: TextAlign.center,
                                 ),
