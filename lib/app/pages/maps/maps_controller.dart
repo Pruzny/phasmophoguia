@@ -8,7 +8,7 @@ class MapsController extends GetxController {
 
   final _maps = (<MapEntity>[]).obs;
 
-  final _selectedMap = 0.obs;
+  late final Rx<MapEntity> _selectedMap;
 
   final GetAllMapsUsecase getAllMaps;
 
@@ -16,14 +16,14 @@ class MapsController extends GetxController {
 
   bool get isLoading => _isLoading.value;
 
+  List<MapEntity> get maps => _maps;
+
+  MapEntity get selectedMap => _selectedMap.value;
+
   @override
   void onInit() async {
-    _isLoading.value = true;
-
     fetch();
     super.onInit();
-
-    _isLoading.value = false;
   }
 
   void fetch() async {
@@ -32,10 +32,12 @@ class MapsController extends GetxController {
     _maps.clear();
     _maps.addAll(await getAllMaps(null));
 
+    _selectedMap = _maps.first.obs;
+
     _isLoading.value = false;
   }
 
-  void selectMap(int id) {
-    _selectedMap.value = id;
+  void selectMap(MapEntity map) {
+    _selectedMap.value = map;
   }
 }
