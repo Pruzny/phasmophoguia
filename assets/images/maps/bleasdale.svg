@@ -11,7 +11,7 @@
     </rdf:rdf>
   </metadata>
   <g inkscape:groupmode="layer" id="layer18" inkscape:label="Hintergrund" transform="translate(212.44936,11.245116)" style="display:inline" sodipodi:insensitive="true">
-    <rect style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.919021" id="rect12220" width="1225.7216" height="1001.3735" x="-212.44936" y="-11.245116"></rect>
+    <rect style="fill:#282828;fill-opacity:1;stroke:none;stroke-width:0.919021" id="rect12220" width="1225.7216" height="1001.3735" x="-212.44936" y="-11.245116"></rect>
   </g>
   <g inkscape:groupmode="layer" id="layer19" inkscape:label="Grundriss" style="display:inline" transform="translate(212.44936,11.245116)" sodipodi:insensitive="true">
     <rect style="display:inline;fill:#282828;fill-opacity:1;stroke:none" id="rect7963" width="371.38504" height="51.42857" x="-25.952787" y="496.31781"></rect>
@@ -229,6 +229,6 @@
       <rect y="674.11218" x="626.75" height="21.875" width="20.75" id="rect4485" style="fill:none;stroke:#00da00;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"></rect>
       <path sodipodi:nodetypes="ccccccc" inkscape:connector-curvature="0" id="rect4487" d="m 628.5,686.36218 12.5625,-11.625 -5.5625,8.875 10.26096,0.14317 -12.51096,11.48183 5.225,-8.55 z" style="fill:#00da00;fill-opacity:1;stroke:#00da00;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"></path>
     </g>
-    <text xml:space="preserve" style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#c4c4c4;fill-opacity:1;stroke:none" x="381.52319" y="31.94803" id="text4014-6-1-86-0-4-5"><tspan sodipodi:role="line" x="381.52319" y="31.94803" id="tspan4022-8-3-50-0-8-1" style="font-size:56px;line-height:1.25;font-family:sans-serif">Bleasdale Farmhouse</tspan><tspan sodipodi:role="line" x="391.36694" y="101.94803" style="font-size:56px;line-height:1.25;font-family:sans-serif" id="tspan4539">&nbsp;</tspan></text>
+    <text xml:space="preserve" style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#c4c4c4;fill-opacity:1;stroke:none" x="381.52319" y="31.94803" id="text4014-6-1-86-0-4-5"><tspan sodipodi:role="line" x="381.52319" y="31.94803" id="tspan4022-8-3-50-0-8-1" style="font-size:56px;line-height:1.25;font-family:sans-serif">Bleasdale Farmhouse</tspan><tspan sodipodi:role="line" x="391.36694" y="101.94803" style="font-size:56px;line-height:1.25;font-family:sans-serif" id="tspan4539"></tspan></text>
   </g>
 </svg>

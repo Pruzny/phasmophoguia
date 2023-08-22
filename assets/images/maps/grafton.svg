@@ -21,7 +21,7 @@
     </rdf:rdf>
   </metadata>
   <g inkscape:groupmode="layer" id="layer10" inkscape:label="Hintergrund" style="display:inline" transform="translate(33.386272,202.87047)" sodipodi:insensitive="true">
-    <rect style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.887926" id="rect6992" width="1596.844" height="786.96393" x="33.601852" y="-126.13543"></rect>
+    <rect style="fill:#282828;fill-opacity:1;stroke:none;stroke-width:0.887926" id="rect6992" width="1596.844" height="786.96393" x="33.601852" y="-126.13543"></rect>
   </g>
   <g inkscape:groupmode="layer" id="layer11" inkscape:label="Grundriss" style="display:inline" transform="translate(33.386272,202.87047)" sodipodi:insensitive="true">
     <rect style="fill:#282828;fill-opacity:1;stroke:none" id="rect7963" width="434.28571" height="51.42857" x="143.92857" y="605.57648"></rect>
@@ -212,7 +212,7 @@
     </g>
     <text xml:space="preserve" style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#c4c4c4;fill-opacity:1;stroke:none" x="418.99695" y="25.074236" id="text4014-6-1-86-0-4-5-1"><tspan sodipodi:role="line" x="418.99695" y="25.074236" style="font-size:40px;line-height:1.25;font-family:sans-serif" id="tspan4539-2">1st Floor</tspan></text>
     <text xml:space="preserve" style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#c4c4c4;fill-opacity:1;stroke:none" x="1289.1602" y="253.64566" id="text4014-6-1-86-0-4-5-1-9"><tspan sodipodi:role="line" x="1289.1602" y="253.64566" style="font-size:40px;line-height:1.25;font-family:sans-serif" id="tspan4539-2-8">2nd Floor</tspan></text>
-    <text xml:space="preserve" style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#c4c4c4;fill-opacity:1;stroke:none" x="837.54602" y="-82.922974" id="text4014-6-1-86-0-4-5"><tspan sodipodi:role="line" x="837.54602" y="-82.922974" id="tspan4022-8-3-50-0-8-1" style="font-size:56px;line-height:1.25;font-family:sans-serif">Grafton Farmhouse</tspan><tspan sodipodi:role="line" x="847.38977" y="-12.922974" style="font-size:56px;line-height:1.25;font-family:sans-serif" id="tspan4539">&nbsp;</tspan></text>
+    <text xml:space="preserve" style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#c4c4c4;fill-opacity:1;stroke:none" x="837.54602" y="-82.922974" id="text4014-6-1-86-0-4-5"><tspan sodipodi:role="line" x="837.54602" y="-82.922974" id="tspan4022-8-3-50-0-8-1" style="font-size:56px;line-height:1.25;font-family:sans-serif">Grafton Farmhouse</tspan><tspan sodipodi:role="line" x="847.38977" y="-12.922974" style="font-size:56px;line-height:1.25;font-family:sans-serif" id="tspan4539"></tspan></text>
     <circle style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.8679" id="path4455-19" cx="1318.3387" cy="520.6806" r="0"></circle>
   </g>
 </svg>
